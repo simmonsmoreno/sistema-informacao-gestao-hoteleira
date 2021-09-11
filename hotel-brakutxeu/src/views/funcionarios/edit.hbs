@@ -1,0 +1,31 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/reservas/edit/{{reserva.codigo}}" method="POST">
+
+                        <div class="form-group">
+                            De
+                            <input type="text" value="{{reserva.checkin}}" class="form-control" name="checkin"
+                                placeholder="dd-mm-aaaa">
+                        </div>
+
+                        <div class="form-group">
+                            Até
+                            <input type="text" value="{{reserva.checkout}}" class="form-control" name="checkout"
+                                placeholder="dd-mm-aaaa">
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Atualizar Reserva
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
