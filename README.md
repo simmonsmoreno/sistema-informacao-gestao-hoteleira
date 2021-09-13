@@ -19,35 +19,35 @@ O principal objetivo deste projeto é resolver os problemas descritas na introdu
 # Screenshots
 
 <h3> Login Page: </h3>
-![Captura de Ecrã (64)](https://user-images.githubusercontent.com/49438293/133089055-8230c0d3-9de7-43c5-a68a-f45f8488e949.png)
+<img src="https://user-images.githubusercontent.com/49438293/133089055-8230c0d3-9de7-43c5-a68a-f45f8488e949.png" width="600"/>
 </hr>
 
 <h3> Register Page: </h3>
-![Captura de Ecrã (65)](https://user-images.githubusercontent.com/49438293/133087895-cb6e2619-ac23-489a-afa0-21c3e816f21c.png)
+<img src="https://user-images.githubusercontent.com/49438293/133087895-cb6e2619-ac23-489a-afa0-21c3e816f21c.png" width="600"/>
 </hr>
 
 <h3> Home Page: </h3>
-![Captura de Ecrã (66)](https://user-images.githubusercontent.com/49438293/133087900-31ad5e8c-0cc8-4ecc-8528-61fc95ed3e45.png)
+<img src="https://user-images.githubusercontent.com/49438293/133087900-31ad5e8c-0cc8-4ecc-8528-61fc95ed3e45.png" width="600"/>
 </hr>
 
 <h3> Reservas: </h3>
-![Captura de Ecrã (67)](https://user-images.githubusercontent.com/49438293/133087910-b113417c-c4b3-4087-aede-652e0245ad53.png)
+<img src="https://user-images.githubusercontent.com/49438293/133087910-b113417c-c4b3-4087-aede-652e0245ad53.png" width="600"/>
 </hr>
 
 <h3> Registar Hospedes: </h3>
-![Captura de Ecrã (69)](https://user-images.githubusercontent.com/49438293/133087911-0f6cfd35-a2f9-4793-a8b9-6fc77a1568f7.png)
+<img src="https://user-images.githubusercontent.com/49438293/133087911-0f6cfd35-a2f9-4793-a8b9-6fc77a1568f7.png" width="600"/>
 </hr>
 
 <h3> Listar Hospedes: </h3>
-![Captura de Ecrã (70)](https://user-images.githubusercontent.com/49438293/133087913-59e2f59b-d416-4037-8b1f-3009a645ff61.png)
+<img src="https://user-images.githubusercontent.com/49438293/133087913-59e2f59b-d416-4037-8b1f-3009a645ff61.png" width="600"/>
 </hr>
 
 <h3> Listar Quartos: </h3>
-![Captura de Ecrã (71)](https://user-images.githubusercontent.com/49438293/133087922-e90faf68-1d1b-4513-9aa7-f253e65383d1.png)
+<img src="https://user-images.githubusercontent.com/49438293/133087922-e90faf68-1d1b-4513-9aa7-f253e65383d1.png" width="600"/>
 </hr>
 
 <h3> Payments Page: </h3>
-![Captura de Ecrã (72)](https://user-images.githubusercontent.com/49438293/133087885-4d721675-5bfd-497e-a253-5572f88370ed.png)
+<img src="https://user-images.githubusercontent.com/49438293/133087885-4d721675-5bfd-497e-a253-5572f88370ed.png" width="600"/>
 </hr>
 
 </br>
