@@ -1,6 +1,4 @@
 # Sistema de Informacao para Gestao Hoteleira
-Miniprojecto de Gestão Hoteleira desenvolvido inicialmente em Java e aperfeicoado depois em Node.js
-
 
 # Introducao
 O projeto foi proposto para resolver alguns problemas da unidade hoteleira Hotel BracuTxeu (nome ficticio) onde passam por alguns picos de requisição e precisam de um sistema Web com vista a resolução de alguns problemas tais como:
