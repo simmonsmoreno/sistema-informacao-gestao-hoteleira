@@ -19,7 +19,7 @@ O principal objetivo deste projeto é resolver os problemas descritas na introdu
 # Screenshots
 
 <h3> Login Page: </h3>
-![Captura de Ecrã (64)](https://user-images.githubusercontent.com/49438293/133087889-bbd43c9a-3f8a-4ae3-b9c1-2e3b3ec0dad6.png)
+![Captura de Ecrã (64)](https://user-images.githubusercontent.com/49438293/133089055-8230c0d3-9de7-43c5-a68a-f45f8488e949.png)
 </hr>
 
 <h3> Register Page: </h3>
@@ -50,4 +50,6 @@ O principal objetivo deste projeto é resolver os problemas descritas na introdu
 ![Captura de Ecrã (72)](https://user-images.githubusercontent.com/49438293/133087885-4d721675-5bfd-497e-a253-5572f88370ed.png)
 </hr>
 
+</br>
+</br>
 2020 &copy; Simao Moreno | Gestão de Projetos Informáticos 
