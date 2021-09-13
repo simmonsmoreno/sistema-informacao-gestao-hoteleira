@@ -20,6 +20,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 CREATE SCHEMA IF NOT EXISTS `gestao_hotel` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 USE `gestao_hotel` ;
 
+
 -- -----------------------------------------------------
 -- Table `gestao_hotel`.`funcionario`
 -- -----------------------------------------------------
@@ -35,6 +36,63 @@ CREATE TABLE IF NOT EXISTS `gestao_hotel`.`funcionario` (
   `entrada` DATE DEFAULT CURRENT_TIMESTAMP(),
   `salario` FLOAT NULL DEFAULT 45000,
   PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `gestao_hotel`.`limpeza`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `gestao_hotel`.`limpeza` (
+  `id` INT NOT NULL,
+  `empregada` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `gestao_hotel`.`quarto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `gestao_hotel`.`quarto` (
+  `numero` INT NOT NULL,
+  `preco` INT NULL,
+  `tipo` VARCHAR(45) NULL,
+  `criancas` boolean null,
+  `num_camas` INT NULL,
+  `descricao` VARCHAR(255) NULL,
+  `imagem` VARCHAR(255) NULL,
+  PRIMARY KEY (`numero`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `gestao_hotel`.`hospede`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `gestao_hotel`.`hospede` (
+  `nif` INT NOT NULL,
+  `nome_h` VARCHAR(45) NULL,
+  `nacionalidade` VARCHAR(45) NULL,
+  `telefone` INT NULL,
+  `email` VARCHAR(45) NULL,
+  PRIMARY KEY (`nif`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `gestao_hotel`.`reserva`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `gestao_hotel`.`reserva` (
+  `codigo` INT NOT NULL AUTO_INCREMENT,
+  `data_reserva` DATETIME NULL,
+  `status` VARCHAR(45) NULL,
+  `checkin` DATETIME NULL,
+  `checkout` DATETIME NULL,
+  `funcionario_id` INT NOT NULL,
+  PRIMARY KEY (`codigo`),
+  CONSTRAINT `fk_reserva_funcionario`
+    FOREIGN KEY (`funcionario_id`)
+    REFERENCES `gestao_hotel`.`funcionario` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -57,29 +115,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `gestao_hotel`.`hospede`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gestao_hotel`.`hospede` (
-  `nif` INT NOT NULL,
-  `nome_h` VARCHAR(45) NULL,
-  `nacionalidade` VARCHAR(45) NULL,
-  `telefone` INT NULL,
-  `email` VARCHAR(45) NULL,
-  PRIMARY KEY (`nif`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gestao_hotel`.`limpeza`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gestao_hotel`.`limpeza` (
-  `id` INT NOT NULL,
-  `empregada` VARCHAR(45) NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `gestao_hotel`.`pagamento`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gestao_hotel`.`pagamento` (
@@ -93,21 +128,6 @@ CREATE TABLE IF NOT EXISTS `gestao_hotel`.`pagamento` (
     REFERENCES `gestao_hotel`.`hospedagem` (`numero`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gestao_hotel`.`quarto`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gestao_hotel`.`quarto` (
-  `numero` INT NOT NULL,
-  `preco` INT NULL,
-  `tipo` VARCHAR(45) NULL,
-  `criancas` boolean null,
-  `num_camas` INT NULL,
-  `descricao` VARCHAR(255) NULL,
-  `imagem` VARCHAR(255) NULL,
-  PRIMARY KEY (`numero`))
 ENGINE = InnoDB;
 
 
@@ -128,25 +148,6 @@ CREATE TABLE IF NOT EXISTS `gestao_hotel`.`quarto_has_limpeza` (
     FOREIGN KEY (`limpeza_id`)
     REFERENCES `gestao_hotel`.`limpeza` (`id`)
     ON DELETE cascade
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `gestao_hotel`.`reserva`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gestao_hotel`.`reserva` (
-  `codigo` INT NOT NULL AUTO_INCREMENT,
-  `data_reserva` DATETIME NULL,
-  `status` VARCHAR(45) NULL,
-  `checkin` DATETIME NULL,
-  `checkout` DATETIME NULL,
-  `funcionario_id` INT NOT NULL,
-  PRIMARY KEY (`codigo`),
-  CONSTRAINT `fk_reserva_funcionario`
-    FOREIGN KEY (`funcionario_id`)
-    REFERENCES `gestao_hotel`.`funcionario` (`id`)
-    ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
