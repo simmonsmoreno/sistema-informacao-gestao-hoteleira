@@ -1,0 +1,92 @@
+<!-- ============================================================== -->
+<!-- Page Content -->
+<!-- ============================================================== -->
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row bg-title">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <h4 class="page-title"> {{title}} </h4>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                <ol class="breadcrumb">
+                    <li><a href="#">{{title}}</a></li>
+                    <li class="active">Detalhes</li>
+                </ol>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="white-box">
+                    <h3>Detalhes do Pagamento</h3>
+                    <dl class="row">
+                        {{#each pagamentos}}
+                        <dt class="col-sm-3">Numero</dt>
+                        <dd class="col-sm-9">{{ num_pagamento}}</dd>
+
+                        <dt class="col-sm-3">Data</dt>
+                        <dd class="col-sm-9">{{data_pagamento}}</dd>
+
+                        <dt class="col-sm-3">Total a pagar</dt>
+                        <dd class="col-sm-9">{{valor}}$00</dd>
+
+                        <dt class="col-sm-3">Nif do hóspede</dt>
+                        <dd class="col-sm-9">{{nif}}</dd>
+
+                        <dt class="col-sm-3">Hóspede</dt>
+                        <dd class="col-sm-9"><a href="/hospedes/ver/{{nif}}">{{nome_h}}</a></dd>
+
+                        <dt class="col-sm-3">Funcionário</dt>
+                        <dd class="col-sm-9"><a href="/funcionarios/ver/{{id}}">{{nome_f}}</a></dd>
+                        {{/each}}
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="white-box">
+                    <h3>Reservas Relacionadas</h3>
+                    <div class="row">
+                        {{#each pagamentos}}
+                        <div class="col-md-4 mb-4">
+                            <div class="card text-center">
+                                <div class="card-header">
+                                    {{ nome_h }}
+                                </div>
+                                <div class="card-body">
+                                    <p style="font-size: small;" class="m-2">Check-in: {{checkin}}</p>
+                                    <p class="m-2">Estado da Reserva: {{status}}</p>
+                                    <p class="text-muted">
+                                        Feita há: {{timeago data_reserva}}
+                                    </p>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <a class="btn btn-outline-success" href="/reservas/ver/{{codigo}}">
+                                            Ver
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        {{else}}
+                        <div class="col-md-4 mx-auto">
+                            <div class="card card-body text-center">
+                                <div class="card-body">
+                                    Este Funcionário não fez nenhuma reservas ainda
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+    <footer class="footer text-center"> 2020 &copy; Gestão de Projetos Informáticos </footer>
+</div>
+<!-- ============================================================== -->
+<!-- End Page Content -->
+<!-- ============================================================== -->

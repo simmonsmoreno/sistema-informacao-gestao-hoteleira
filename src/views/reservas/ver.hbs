@@ -1,0 +1,83 @@
+<!-- ============================================================== -->
+<!-- Page Content -->
+<!-- ============================================================== -->
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row bg-title">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <h4 class="page-title"> {{title}} </h4>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                <ol class="breadcrumb">
+                    <li><a href="#">{{title}}</a></li>
+                    <li class="active">Detalhes</li>
+                </ol>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="white-box">
+                    <h3>Detalhes da Reserva</h3>
+                    <dl class="row">
+                        {{#each reserva}}
+                        
+                        <dt class="col-sm-3">Codigo da reserva</dt>
+                        <dd class="col-sm-9">{{ codigo }}</dd>
+
+                        <dt class="col-sm-3">Data da reserva</dt>
+                        <dd class="col-sm-9">{{ data_reserva }}</dd>
+
+                        <dt class="col-sm-3">Hospede</dt>
+                        <dd class="col-sm-9">{{ nome_h}}</dd>
+
+                        <dt class="col-sm-3">Numero de adultos</dt>
+                        <dd class="col-sm-9">{{num_adultos}}</dd>
+
+                        <dt class="col-sm-3">Numero de criancas</dt>
+                        <dd class="col-sm-9">{{num_criancas}}</dd>
+
+                        <dt class="col-sm-3">Checkin</dt>
+                        <dd class="col-sm-9">{{checkin}}</dd>
+
+                        <dt class="col-sm-3">Checkout</dt>
+                        <dd class="col-sm-9">{{checkout}}</dd>
+
+                        <dt class="col-sm-3">Estado da reserva</dt>
+                        <dd class="col-sm-9">{{status}}</dd>
+
+                        <dt class="col-sm-3">Funcionario que fez a reserva</dt>
+                        <dd class="col-sm-9">{{nome_f}}</dd>
+
+                        <dt class="col-sm-3">Quarto</dt>
+                        <dd class="col-sm-9">{{quarto_numero}}</dd>
+
+                        <dt class="col-sm-3">Total a pagar</dt>
+                        <dd class="col-sm-9">{{quantia}}</dd>
+
+                        </br>
+                        <dt class="col-sm-3"></dt>
+                        <dd class="col-sm-9">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-danger" href="/reservas">
+                                    Fechar
+                                </a>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-info" href="/reservas/edit/{{codigo}}">
+                                    Atualizar
+                                </a>
+                            </div>
+                        </dd>
+                        {{/each}}
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+    <footer class="footer text-center"> 2020 &copy; Gestão de Projetos Informáticos </footer>
+</div>
+<!-- ============================================================== -->
+<!-- End Page Content -->
+<!-- ============================================================== -->

@@ -1,0 +1,43 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/quartos/add" method="POST">
+                        <div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="numero" placeholder="Numero do Quarto">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="descricao" placeholder="Descrição">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="num_camas"
+                                    placeholder="Número de Camas">
+                            </div>
+                            <div class="form-group">
+                                <label for="tipo_quarto">Tipo Quarto</label>
+                                <select name="tipo_quarto" class="form-control">
+                                    <option value="Standart">Standart</option>
+                                    <option value="Master">Master</option>
+                                    <option value="Deluxe">Deluxe</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="preco" placeholder="Preço">
+                            </div>
+                            <!--<div class="form-group">
+                                <label for="uploaded_image">Imagem: </label>
+                                <input class="form-control" type="file" name="uploaded_image" accept="" />
+                            </div>-->
+                            <button class="btn btn-success btn-block m-8">
+                                Registrar Quarto
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,50 @@
+<!-- ============================================================== -->
+<!-- Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
+{{#if funcionario}}
+<div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav slimscrollsidebar">
+        <ul class="nav" id="side-menu">
+            <div class="top-left-part">
+                <!-- Logo -->
+                <a class="logo" href="/">
+                    <!-- Logo text image you can use text also -->
+                    <span
+                        style="margin-left: 20px ; color: rgb(50, 65, 114); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                        brakutxeu
+                    </span>
+                </a>
+            </div>
+            <li style="padding: 10px 0 0;">
+                <a href="/reservas" class="waves-effect"><i class="fa fa-bookmark fa-fw"
+                        aria-hidden="true"></i>Reservas</a>
+            </li>
+            <li>
+                <a href="/hospedes" class="waves-effect"><i class="fa fa-suitcase fa-fw"
+                        aria-hidden="true"></i>Hóspedes</a>
+            </li>
+            <li>
+                <a href="/quartos" class="waves-effect"><i class="fa fa-building fa-fw"
+                        aria-hidden="true"></i>Quartos</a>
+            </li>
+            <li>
+                <a href="/pagamentos" class="waves-effect"><i class="fa fa-money fa-fw"
+                        aria-hidden="true"></i>Pagamentos</a>
+            </li>
+            <li>
+                <a href="/funcionarios" class="waves-effect"><i class="fa fa-users fa-fw"
+                        aria-hidden="true"></i>Funcionários</a>
+            </li>
+            <li>
+                <a href="/limpeza" class="waves-effect"><i class="fa fa-support fa-fw" aria-hidden="true"></i>Serviços
+                    Limpeza</a>
+            </li>
+        </ul>
+    </div>
+</div>
+{{else}}
+
+{{/if}}
+<!-- ============================================================== -->
+<!-- End Left Sidebar -->
+<!-- ============================================================== -->

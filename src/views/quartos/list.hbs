@@ -1,0 +1,89 @@
+<!-- ============================================================== -->
+<!-- Page Content -->
+<!-- ============================================================== -->
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row bg-title">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <h4 class="page-title">Quartos</h4>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                <ol class="breadcrumb">
+                    <li><a href="#">Quartos</a></li>
+                    <li class="active">Lista</li>
+                </ol>
+            </div>
+            <!-- /.col-lg-12 -->
+            <div class="row justify-content-end">
+                <div class="">
+                    <a href="/quartos/add">
+                        <button type="button" class="btn btn-primary">
+                            <i class="fas fa-plus-circle"></i>
+                            Registrar Novo Quarto</button>
+                    </a>
+                </div>
+
+                <div class="col-md-12 text-center">
+                    <div class="btn-group text-center" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-primary">Todos</button>
+                        <button type="button" class="btn btn-outline-secondary">Standart</button>
+                        <button type="button" class="btn btn-outline-success">Master</button>
+                        <button type="button" class="btn btn-outline-info">Deluxe</button>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="white-box">
+                        <div class="row">
+                            {{#each quartos}}
+                            <div class="col-md-4 mb-4">
+                                <div class="card text-center">
+                                    <div class="card-header">
+                                        <h1> {{numero}} </h1>
+                                        <h2> <b> {{tipo}} </b></h2>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-title">
+                                            <p> Preço: <b>{{ preco }} ECV</b></p>
+                                        </div>
+                                        <p style="font-size: small;" class="m-2">Desricao: <b> {{descricao}} </b></p>
+                                        <p class="m-2">Numero de Camas: <b>{{num_camas}}</b></p>
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <a class="btn btn-outline-success" href="/quartos/ver/{{numero}}">
+                                                Ver
+                                            </a>
+                                            <a class="btn btn-outline-info" href="/quartos/edit/{{numero}}">
+                                                Editar
+                                            </a>
+                                            <a class="btn btn-outline-danger" href="/quartos/delete/{{numero}}">
+                                                Apagar
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            {{else}}
+                            <div class="col-md-4 mx-auto">
+                                <div class="card card-body text-center">
+                                    <div class="card-header">
+                                        Nenhum quarto registrado ainda
+                                    </div>
+                                    <div class="card-body">
+                                        Registrar
+                                    </div>
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+        <footer class="footer text-center"> 2020 &copy; Gestão de Projetos Informáticos
+            <br> Desenvolvido por Saiman Moreno
+        </footer>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page Content -->
+    <!-- ============================================================== -->
