@@ -52,4 +52,4 @@ O principal objetivo deste projeto é resolver os problemas descritas na introdu
 
 </br>
 </br>
-2020 &copy; Simao Moreno | Gestão de Projetos Informáticos 
+<div style="color:blue; text-align:center">2020 &copy; Simao Moreno | Gestão de Projetos Informáticos </div>
